@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd">
+
+    <changeSet author="TEAM BOOST" id="1.0">
+        <createTable tableName="readings">
+            <column name="id" type="UUID">
+                <constraints nullable="false"/>
+            </column>
+            <column name="l1_v" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="l2_v" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="l3_v" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <addPrimaryKey columnNames="id" constraintName="readings_pkey" tableName="readings"/>
+    </changeSet>
+
+
+</databaseChangeLog>
